@@ -4,7 +4,7 @@
 # name of the character.
 
 define bscreen = Character(None,
-                          what_size=50, #Font size
+                          what_size=45, #Font size
                           what_xalign=0.5, #Centers text within the window
                           window_xalign=0.5, #Centers the window horizontally
                           window_yalign=0.5, #Centers the window vertically
@@ -21,7 +21,10 @@ define bscreen = Character(None,
 label start:
 
 
-    jump prologue
+    call prologue
+    
+    call first_day
+
 
     return
 
@@ -30,6 +33,6 @@ label prologue:
 
     show black with fade
 
-    bscreen ""
+    bscreen "ma sopratutto mi chiedo come saranno i miei nuovi compagni..."
 
     return
